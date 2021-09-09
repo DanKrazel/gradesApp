@@ -2,17 +2,17 @@ import http from "../http-common";
 
 class GradesDataService {
     getAll(page = 0) {
-        return http.get(`grades?page=${page}`);
+        return http.get(`?page=${page}`);
     }
     
     get(id) {
-        return http.get(`/grades?id=${id}`);
+        return http.get(`?id=${id}`);
     }
     
     find(query, by = "student_id", page = 0) {
-        return http.get(`grades?${by}=${query}&page=${page}`);
+        return http.get(`?${by}=${query}&page=${page}`);
     } 
-    
+
     createReview(data) {
         return http.post("/review-new", data);
     }

@@ -49,7 +49,7 @@ function App() {
       <Switch>
         <Route exact path={["/", "/grades"]} component={GradesList} />
         <Route 
-          path="/grades"
+          path="/gradesS"
           render={(props) => (
             <Grades {...props} user={user} />
           )}
